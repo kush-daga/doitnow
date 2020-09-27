@@ -68,6 +68,26 @@ li {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+.btn {
+  padding: 16px;
+  height: fit-content;
+  align-self: center;
+  margin-left: 8px;
+  font-size: 16px;
+  background-color: var(--main-bg-color-dark);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--main-font-color-dark);
+}
+.btn:hover {
+  color: var(--main-secondary-font-color-dark);
+  scale: 1.1;
+}
+.lists {
+  height: 40vh;
+  overflow-y: auto;
+}
 .list {
   font-size: 24px;
   border-bottom: 1px solid var(--main-bg-color-dark);
@@ -93,6 +113,7 @@ li {
   font-size: 24px;
   margin-left: 16px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .list-form input {
   border: none;

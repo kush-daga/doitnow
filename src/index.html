@@ -16,27 +16,32 @@
     <div class="container">
       <div class="list-container">
         <h2>All lists</h2>
-        <ul class="lists">
+        <ul class="lists" data-lists>
           <li class="list active">List 1</li>
-          <li class="list">List 2</li>
-          <li class="list">List 3</li>
         </ul>
-        <form class="list-form" action="">
+        <form class="list-form" action="" data-list-form>
           <input
             type="text"
             class="new-list"
             placeholder="New List"
             aria-label="New list name"
+            data-list-input
           />
-          <button class="btn-submit" aria-label="Create new list">+</button>
+          <button
+            class="btn-submit"
+            aria-label="Create new list"
+            data-list-submit-btn
+          >
+            +
+          </button>
         </form>
       </div>
-      <div class="tasks-container">
-        <div class="task-header">
+      <div class="tasks-container" data-task-container>
+        <div class="task-header" data-task-header>
           <h3 class="task-heading">List 1</h3>
           <h4 class="task-count">5 Tasks remaining</h4>
         </div>
-        <div class="task-list">
+        <div class="task-list" data-task-list>
           <div class="task">
             <input type="checkbox" id="task-1" data-task-checked />
             <label for="task-1">
@@ -44,31 +49,32 @@
               <span class="strikethis">To Do 1</span>
             </label>
           </div>
-          <div class="task">
-            <input type="checkbox" id="task-2" data-task-checked />
-            <label for="task-2">
-              <span class="custom-checkbox"></span>
-              <span class="strikethis">To Do 2</span>
-            </label>
-          </div>
-          <div class="task">
-            <input type="checkbox" id="task-3" data-task-checked />
-            <label for="task-3">
-              <span class="custom-checkbox"></span>
-              <span class="strikethis">To Do 3</span>
-            </label>
-          </div>
         </div>
-        <form class="task-form" action="">
-          <input
-            type="text"
-            class="new-task"
-            placeholder="Get groceries"
-            aria-label="New task name"
-          />
-          <button class="btn-submit" aria-label="Create new list">+</button>
-        </form>
+        <div style="display: flex; margin-top: auto">
+          <form class="task-form" data-task-form action="">
+            <input
+              type="text"
+              class="new-task"
+              placeholder="Get groceries"
+              aria-label="New task name"
+              data-task-input
+            />
+            <button class="btn-submit" aria-label="Create new list">+</button>
+          </form>
+          <button class="btn" data-delete-list>Delete List</button>
+          <button class="btn" data-delete-completed-tasks>
+            Clear completed tasks
+          </button>
+        </div>
       </div>
     </div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
   </body>
 </html>
