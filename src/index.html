@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <script defer src="./scripts/index.js"></script>
     <title>DO IT NOW</title>
   </head>
   <body>
-    <h1>Do It Now!</h1>
-    <h3>A better To do list app</h3>
+    <div class="header">
+      <h1 class="title">Do It Now!</h1>
+      <h2 class="sub-title">A better To do list app</h2>
+    </div>
+
     <div class="container">
       <div class="list-container">
+        <h2>All lists</h2>
         <ul class="lists">
-          <li class="list">List 1</li>
+          <li class="list active">List 1</li>
           <li class="list">List 2</li>
           <li class="list">List 3</li>
         </ul>
-        <form action="">
+        <form class="list-form" action="">
           <input
             type="text"
             class="new-list"
-            placeholder="List 1"
+            placeholder="New List"
             aria-label="New list name"
           />
           <button class="btn-submit" aria-label="Create new list">+</button>
@@ -33,14 +38,28 @@
         </div>
         <div class="task-list">
           <div class="task">
-            <input type="checkbox" id="task-1" />
+            <input type="checkbox" id="task-1" data-task-checked />
             <label for="task-1">
               <span class="custom-checkbox"></span>
-              To Do 1
+              <span class="strikethis">To Do 1</span>
+            </label>
+          </div>
+          <div class="task">
+            <input type="checkbox" id="task-2" data-task-checked />
+            <label for="task-2">
+              <span class="custom-checkbox"></span>
+              <span class="strikethis">To Do 2</span>
+            </label>
+          </div>
+          <div class="task">
+            <input type="checkbox" id="task-3" data-task-checked />
+            <label for="task-3">
+              <span class="custom-checkbox"></span>
+              <span class="strikethis">To Do 3</span>
             </label>
           </div>
         </div>
-        <form action="">
+        <form class="task-form" action="">
           <input
             type="text"
             class="new-task"

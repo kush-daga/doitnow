@@ -1,8 +1,21 @@
 /* BOILER PLATE CSS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+:root {
+  --main-bg-color-dark: #1f1f1f;
+  --main-secondary-bg-color-dark: #303030;
+  --main-font-color-dark: #bfbebe;
+  --main-secondary-font-color-dark: #848886;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lato";
+}
+
+body {
+  background-color: var(--main-bg-color-dark);
 }
 
 a {
@@ -11,4 +24,178 @@ a {
 
 li {
   list-style: none;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+.title {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: var(--main-font-color-dark);
+}
+.sub-title {
+  font-size: 40px;
+  color: var(--main-secondary-font-color-dark);
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 5vh;
+  width: 80%;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.list-container {
+  flex: 1;
+  background-color: var(--main-secondary-bg-color-dark);
+  color: var(--main-secondary-font-color-dark);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container h2 {
+  color: var(--main-bg-color-dark);
+  background-color: var(--main-font-color-dark);
+  font-size: 32px;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.list {
+  font-size: 24px;
+  border-bottom: 1px solid var(--main-bg-color-dark);
+  padding: 16px;
+  cursor: pointer;
+}
+.list.active {
+  background-color: var(--main-secondary-font-color-dark);
+  color: var(--main-bg-color-dark);
+  font-weight: 600;
+}
+.list-form {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+.list-form .btn-submit {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: var(--main-font-color-dark);
+  font-size: 24px;
+  margin-left: 16px;
+  box-sizing: border-box;
+}
+.list-form input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: var(--main-font-color-dark);
+  font-size: 24px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--main-font-color-dark);
+}
+
+.tasks-container {
+  flex: 2;
+  min-height: 60vh;
+  margin-left: 16px;
+  background-color: var(--main-secondary-bg-color-dark);
+  color: var(--main-secondary-font-color-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.task-header {
+  background-color: var(--main-font-color-dark);
+  color: var(--main-bg-color-dark);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+}
+.task-header h3 {
+  font-size: 32px;
+}
+.task-header h4 {
+  font-size: 24px;
+}
+.task {
+  font-size: 24px;
+  border-bottom: 1px solid var(--main-bg-color-dark);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+.task input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.task label {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  font-size: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-checkbox {
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-top: 2px;
+  background-color: var(--main-font-color-dark);
+}
+
+.task input:checked + label .custom-checkbox {
+  background-color: var(--main-secondary-bg-color-dark);
+  border: 2px solid var(--main-font-color-dark);
+}
+.task input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+.task-form {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+.task-form .btn-submit {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: var(--main-font-color-dark);
+  font-size: 24px;
+  margin-left: 16px;
+  box-sizing: border-box;
+}
+.task-form input {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: var(--main-font-color-dark);
+  font-size: 24px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--main-font-color-dark);
 }
