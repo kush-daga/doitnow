@@ -32,6 +32,27 @@ li {
   align-items: center;
   margin-top: 5vh;
 }
+.view-github {
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: var(--main-font-color-dark);
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.view-github h5 {
+  color: var(--main-secondary-bg-color-dark);
+}
+.view-github h5:hover {
+  text-decoration: underline;
+}
+
 .title {
   font-size: 60px;
   text-transform: uppercase;
