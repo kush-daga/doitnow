@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>DO IT NOW</title>
+  </head>
+  <body>
+    <h1>Do It Now!</h1>
+    <h3>A better To do list app</h3>
+    <div class="container">
+      <div class="list-container">
+        <ul class="lists">
+          <li class="list">List 1</li>
+          <li class="list">List 2</li>
+          <li class="list">List 3</li>
+        </ul>
+        <form action="">
+          <input
+            type="text"
+            class="new-list"
+            placeholder="List 1"
+            aria-label="New list name"
+          />
+          <button class="btn-submit" aria-label="Create new list">+</button>
+        </form>
+      </div>
+      <div class="tasks-container">
+        <div class="task-header">
+          <h3 class="task-heading">List 1</h3>
+          <h4 class="task-count">5 Tasks remaining</h4>
+        </div>
+        <div class="task-list">
+          <div class="task">
+            <input type="checkbox" id="task-1" />
+            <label for="task-1">
+              <span class="custom-checkbox"></span>
+              To Do 1
+            </label>
+          </div>
+        </div>
+        <form action="">
+          <input
+            type="text"
+            class="new-task"
+            placeholder="Get groceries"
+            aria-label="New task name"
+          />
+          <button class="btn-submit" aria-label="Create new list">+</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
